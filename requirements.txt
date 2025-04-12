@@ -1,0 +1,4 @@
+python-dotenv
+keyboard
+mouse
+Pillow

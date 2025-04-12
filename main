@@ -1,0 +1,25 @@
+import subprocess
+import platform
+import sys
+
+# Instala as dependências do arquivo requirements.txt
+subprocess.run([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+
+# Ensure Pillow is installed for image support in tkinter
+subprocess.run([sys.executable, "-m", "pip", "install", "Pillow"])
+
+# Ensure mouse library is installed for mouse click simulation
+subprocess.run([sys.executable, "-m", "pip", "install", "mouse"])
+
+# Instala o tkinter apenas em sistemas Linux
+if platform.system() == "Linux":
+    subprocess.run(["sudo", "apt-get", "install", "-y", "python3-tk"])
+
+# Navega para o diretório do Road Spammer
+subprocess.run(["cd", "c:\\Users\\rodri\\OneDrive\\Área de Trabalho\\RoadSpammer"])
+
+# Redireciona para o modo visual do Road Spammer
+subprocess.run(["python", "gui.py"])
+
+# Executa o script principal do Road Spammer
+subprocess.run(["python", "c:\\Users\\rodri\\OneDrive\\Área de Trabalho\\RoadSpammer\\main"])
